@@ -118,7 +118,7 @@ pub fn build(b: *std.Build) void {
         const cpu = target.result.cpu;
         const x86 = cpu.arch.isX86();
         const arm = cpu.arch.isArm();
-        const aarch64 = cpu.arch.isAARCH64();
+        const aarch64 = cpu.arch.isAarch64();
         const loongarch = cpu.arch == .loongarch32 or cpu.arch == .loongarch64;
         break :build_config_h b.addConfigHeader(.{
             .style = .{ .cmake = b.path("include/build_config/SDL_build_config.h.cmake") },
